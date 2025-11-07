@@ -20,11 +20,6 @@ export default async function Home() {
           stories power the Flex Living website. Use filters to slice performance by property, review
           status, or theme, then approve reviews for public display in one click.
         </p>
-        {data.source === "mock" && (
-          <p className="inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50 px-4 py-1.5 text-xs font-medium text-amber-700">
-            Using mock Hostaway data – configure HOSTAWAY_API_KEY to connect to the live sandbox.
-          </p>
-        )}
       </header>
 
       <ReviewsDashboard data={data} />
