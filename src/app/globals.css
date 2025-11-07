@@ -3,19 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  color-scheme: only light;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-slate-50 text-slate-900 antialiased;
+  font-family: var(--font-geist-sans);
+}
+
+a {
+  @apply text-emerald-600 underline-offset-4 transition hover:text-emerald-700;
+}
+
+::selection {
+  @apply bg-emerald-200 text-slate-900;
 }
